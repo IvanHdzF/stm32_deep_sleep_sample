@@ -23,6 +23,7 @@ typedef struct
     void *handle;
 } lis2dw12_hal_config_t;
 
+uint8_t hal_lis2dw12_clear_wakeup_irq(void);
 uint8_t hal_lis2dw12_configure(lis2dw12_hal_config_t *new_dev_handle);
 uint8_t hal_lis2dw12_initialize(void);
 

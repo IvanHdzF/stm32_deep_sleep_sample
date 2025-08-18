@@ -83,6 +83,7 @@ void ds_main(void)
     while(1)
     {
         hal_deep_sleep();
+        hal_lis2dw12_clear_wakeup_irq();
         hal_blink(BLINK_PERIOD_MS, BLINK_DURATION_MS);
     }
 }
