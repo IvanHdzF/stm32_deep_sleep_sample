@@ -10,7 +10,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "stm32u5xx_hal.h"
+#include "main.h"
 
 #include "third_party/lis2dw12-pid/lis2dw12_reg.h"
 #include "config/config.h"
