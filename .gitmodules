@@ -1,0 +1,7 @@
+[submodule "third_party/lis2du12"]
+	path = third_party/lis2du12
+	url = https://github.com/STMicroelectronics/lis2du12-pid.git
+	branch = master
+[submodule "third_party/lis2dw12-pid"]
+	path = third_party/lis2dw12-pid
+	url = https://github.com/STMicroelectronics/lis2dw12-pid.git
