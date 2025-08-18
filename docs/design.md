@@ -38,6 +38,12 @@ This document describes the software architecture and design rationale for the S
   - **`lis2dw12_hal`**: Designed with low coupling and high configurability. Uses a configuration struct (`lis2dw12_hal_config_t`) to abstract hardware access, allowing the user to provide function pointers for register access and delays. This enables easy adaptation to different hardware platforms and facilitates unit testing.
   - **`sleep` and `blink`**: Tightly coupled to the STM32 HAL. These modules are intentionally simple and direct, as their functionality is trivial and does not warrant additional abstraction. This design choice reduces development overhead for non-critical modules.
 
+### 4. Drivers and third party layer
+
+This layer contains:
+- **Drivers:** Auto-generated code from STM32CubeMX for STM32 peripherals (e.g., SPI, GPIO, HAL, startup files). These provide the hardware abstraction and initialization routines required by the rest of the system.
+- **Third party:** External libraries and drivers, typically included as git submodules. These are used for interfacing with sensors or other hardware components (e.g., LIS2DW12 sensor driver). This approach allows easy updates and integration of vendor-provided or open-source code.
+
 ## Design Justification
 
 ### Modularity
