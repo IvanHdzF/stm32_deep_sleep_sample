@@ -46,7 +46,10 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
+#define DRV_LITTLE_ENDIAN 1234
+#define DRV_BIG_ENDIAN    4321
 
+#define DRV_BYTE_ORDER  DRV_LITTLE_ENDIAN
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
