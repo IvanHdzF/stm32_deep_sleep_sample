@@ -14,3 +14,20 @@ To initialize the git submodules:
 - git submodule update --recursive
 - Open .project files with STM32CubeIDE / import the root folder from it that has the project.
 - Opening the .ioc file from STM32CubeMX is possible to modify the pin peripherals, as long as the labels are consistent to not break any service.
+
+## Additional Documentation
+
+- **`methodology/`**
+	- Contains documents detailing the development process, design methodology, and rationale behind architectural decisions. This folder is useful for understanding the approach taken during the project and the reasoning behind key choices.
+
+- **`docs/`**
+	- `comparativa_sensores.md`: A comprehensive comparison of candidate accelerometer sensors, including power consumption, features, pricing, and availability. This document supports hardware selection and justifies the choice of sensor for the project.
+	- `design.md`: The main design document for the project, describing the software architecture, layering, modularity, and the justification for design decisions. It provides a high-level overview of how the system is structured and why.
+
+- **`tests/`**
+	- Contains proposals and plans for both integration and unit testing of the project. The `tests_proposal.md` document outlines:
+		- Integration tests, which validate the system as a whole by running different application modes and observing hardware behavior.
+		- Unit tests, which focus on individual service modules (with the LIS2DW12 HAL service being the primary candidate for isolated unit testing due to its decoupled design).
+	- Refer to `tests/tests_proposal.md` for detailed test cases, strategies, and the rationale behind the testing approach for this project.
+
+Refer to these folders and documents for in-depth technical and design information beyond the codebase itself.
