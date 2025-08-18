@@ -29,7 +29,11 @@
 #if (APPLICATION_TO_RUN == DEEP_SLEEP_MAIN)
 #include "apps/main_app/ds_main.h"
 #elif (APPLICATION_TO_RUN == TEST_SENSOR)
-#include "apps/test_sensor/test_sensor_main.h"
+#include "apps/test_lis2dw12/test_lis2dw12.h"
+#elif (APPLICATION_TO_RUN == TEST_BLINK)
+#include "apps/test_blink/test_blink.h"
+#elif (APPLICATION_TO_RUN == TEST_SLEEP)
+#include "apps/test_sleep/test_sleep.h"
 #endif
 
 /* USER CODE END Includes */
@@ -104,7 +108,11 @@ int main(void)
   #if (APPLICATION_TO_RUN == DEEP_SLEEP_MAIN)
   ds_main();
   #elif (APPLICATION_TO_RUN == TEST_SENSOR)
-  // TODO: Implement test here!
+  test_lis2dw12();
+  #elif (APPLICATION_TO_RUN == TEST_BLINK)
+  test_blink();
+  #elif (APPLICATION_TO_RUN == TEST_SLEEP)
+  test_sleep();
   #endif
 
   /* USER CODE END 2 */

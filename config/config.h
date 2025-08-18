@@ -13,6 +13,7 @@ typedef enum
     DEEP_SLEEP_MAIN,
     TEST_SENSOR,
     TEST_BLINK,
+    TEST_SLEEP
 }applications_t;
 
 /* User configure */
